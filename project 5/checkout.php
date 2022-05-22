@@ -154,7 +154,7 @@
             </div>
            
             <hr class="mb-4">-->
-            <button class="btn btn-secondary btn-lg" type="submit" name="submit" value="submit">Continue to checkout</button>
+            <button class="btn btn-secondary btn-lg" type="submit" name="submit" value="submit" >Continue to checkout</button>
           </form> 
         
         </div>
