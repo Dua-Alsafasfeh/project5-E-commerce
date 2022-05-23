@@ -42,12 +42,12 @@ include './include/header.php'; ?>
       <!--first one -->
       <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="./images/bedroom-cate/bed1.jpg" alt="Card image cap">
+          <img class="card-img-top" src="./images/anas.png" alt="Card image cap">
           <div class="card-body">
             <h3 class="card-title">Anas Allawafeh</h3>
             <p class="card-text">Full Stack Web Developer</p>
             <a href="https://www.linkedin.com/in/anas-al-lawafeh-b05954232/" target="_blank" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
-            <a href="https://github.com/10-anasAllawafeh/project5" target="_blank" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
+            <a href="https://github.com/10-anasAllawafeh" target="_blank" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
           </div>
         </div>
       </div>
@@ -67,12 +67,12 @@ include './include/header.php'; ?>
       <!-- third one -->
       <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="./images/bedroom-cate/bed1.jpg" alt="Card image cap">
+          <img class="card-img-top" src="./images/dyar.png" alt="Card image cap">
           <div class="card-body">
-            <h3 class="card-title">Dyar </h3>
+            <h3 class="card-title">Dyar Alhunaity</h3>
             <p class="card-text">Full Stack Web Developer</p>
-            <a href="#" target="_blank" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
-            <a href="#" target="_blank" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/dyar-hunaity-90a540236/" target="_blank" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a href="https://github.com/Dyarhunaity/projectphp5" target="_blank" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
           </div>
         </div>
       </div>
@@ -84,12 +84,12 @@ include './include/header.php'; ?>
       <!-- fourth one -->
       <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="./images/bedroom-cate/bed1.jpg" alt="Card image cap">
+          <img class="card-img-top" src="./images/marwa1.png" alt="Card image cap">
           <div class="card-body">
             <h3 class="card-title">Marwa Nseerat</h3>
             <p class="card-text">Full Stack Web Developer</p>
-            <a href="#" target="_blank" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
-            <a href="#" target="_blank" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/marwa-nseerat-971057227/" target="_blank" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a href="https://github.com/marwanseerat" target="_blank" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
           </div>
         </div>
       </div>

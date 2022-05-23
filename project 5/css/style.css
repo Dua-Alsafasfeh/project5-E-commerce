@@ -2225,7 +2225,7 @@ text-align: center;
 
 
 .about {padding: 90px 0;}
-.about .aboutimg figure {margin: 5em;}
+/* .about .aboutimg figure {margin: 5em;} */
 .about .aboutimg figure img {width: 100%;}
 .about .aboutimg h3 {
 font-size: 45px;
