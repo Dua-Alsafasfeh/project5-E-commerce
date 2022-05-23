@@ -3,7 +3,7 @@
     require_once('config/config.php');    
     require_once('include/helpers.php');  
 
-    $sql = "SELECT * from products p";
+    $sql = "SELECT * from products p;";
                     // -- INNER JOIN product_images pdi ON pdi.product_id = p.id
                     // -- WHERE pdi.is_featured = 1";
     $handle = $db->prepare($sql);
@@ -23,15 +23,16 @@
     
 ?>
 <br>
-  
+    <div class="container">
     <div class="row">
         <div class="col-md-12 col-lg-12 col-xl-12 offset-md-4">
         <form action="main.php" method="POST" >
-            <select name="category" class="form-control col-4" id="" style="height:10vh ; display: inline-block; ">
+            <select name="category" class="form-control col-4" id="" style="height:7vh ; display: inline-block; ">
                 <option value="all">all products</option>
                 <option value="office">Office products</option>
                 <option value="Bedroom">Bedroom Products</option>
                 <option value="livingroom">Living Room Products</option>
+                <option value="sales">Sale Products</option>
             </select>
             <button class="btn btn-secondary " name="select" type="submit" style="margin-left: .75em;">Select</button>
         </form>
@@ -171,9 +172,39 @@
                         }
                         break;
 
-                    default:
-                        # code...
-                        break;
+                        case 'sales':
+                            if ($product['sale'] == 1) {
+                                echo "<div class='col-md-4  mt-2'>
+                                <div class='card'>
+                                     <a href='single-product.php?product=".$product['id']."'>
+                                        <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
+                                    </a>
+                                    <div class='card-body'>
+                                        <h5 class='card-title'>
+                                            <a href='single-product.php?product=".$product['id']."'>
+                                                ".$product['pname']."
+                                            </a>
+                                            </h5>";
+                                            if ($product['sale']==1) {
+                                                echo "<span class='product_price'>$".$product['new_price']."</span>
+                                                <span class ='old-price' STYLE='text-decoration:line-through'>$".$product['price']."</span>";
+                                            }
+                                            else{
+                                                echo "<span class='product_price'>$".$product['price']."</span>";
+                       
+                                            }
+                                            echo "<p class='card-text'>
+                                        <form action='main.php' method='POST' class='form'>
+                                        <input type='hidden' value='".$product['id']."' name='id_value'>
+                                        <button type='submit' class='form=control btn bbtn-primary' name='singalProduct'>view</button>
+                                        </form>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>";
+                            }
+                            break;
+    
                 }
             }
             else{
@@ -214,6 +245,6 @@
             
         <?php endforeach; ?>
     </div>
+    </div>
     <br>
 <?php include('include/footer.php');?>
-

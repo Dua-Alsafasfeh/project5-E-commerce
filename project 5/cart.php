@@ -34,6 +34,7 @@
         $handle->execute();
     }
 ?>
+<div class="container">
 <div class="row">
     <div class="col-md-12">
         <?php if(empty($Products)){?>
@@ -115,5 +116,6 @@
         <br>
         <?php endif; ?>
     </div>
+</div>
 </div>
 <?php include('include/footer.php');?>
