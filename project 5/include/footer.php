@@ -1,7 +1,7 @@
 <!-- footer -->
 <!-- //////////////////////////////// -->
 <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container-fluid my-5">
+<div class="container-fluid">
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white" style="background-color: #363062">
         <!-- Grid container -->

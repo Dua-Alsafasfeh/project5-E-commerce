@@ -29,16 +29,25 @@
         }
 
         button {
-            margin-left: 42%;
+            margin-left: 38%;
+            margin-bottom: 1.5em;
         }
         button a{
             text-decoration: none;
             color: white;
         }
+        a:hover{
+            color: white;
+        }
+        .thank{
+            border: 1px solid;
+            width:60%;
+        }
     </style>
 </head>
 
 <body>
+    <div class=" container thank">
     <div>
         <header class="site-header" id="header">
             <h1 class="site-header__title text-center" data-lead-id="site-header-title">THANK YOU!</h1>
@@ -50,5 +59,7 @@
     </div>
     <button type="button" class="btn btn-secondary btn-lg "><a href="index.php"> Back to Home page</a> </button>
     <br>
+</div>
+    
 </body>
 </html>

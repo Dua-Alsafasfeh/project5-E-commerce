@@ -56,7 +56,12 @@ if (isset($_POST['login']))
 }
 include 'include/header.php'; 
 ?>
-<br><br>
+<div class="hr-theme-slash-2">
+  <div class="hr-line"></div>
+  <div class="hr-icon"><i class="fa-solid fa-couch"></i></div>
+  <div class="hr-line"></div>
+</div>
+<br>
 <!-- Log In form -->
 
 <form  action="login.php" method="POST" id="logForm">

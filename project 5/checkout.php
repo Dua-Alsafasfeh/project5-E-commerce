@@ -40,6 +40,12 @@ $metaDesc = 'Demo PHP Shopping cart checkout page with Validation';
 
 include('include/header.php');
 ?>
+<div class="hr-theme-slash-2">
+  <div class="hr-line"></div>
+  <div class="hr-icon"><i class="fa-solid fa-couch"></i></div>
+  <div class="hr-line"></div>
+</div>
+<br>
 <div class="container">
   <div class="row mt-3">
     <div class="col-md-6 order-md-2 mb-4">

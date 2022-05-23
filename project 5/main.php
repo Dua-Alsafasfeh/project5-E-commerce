@@ -22,12 +22,17 @@
     include('include/header.php');
     
 ?>
+<div class="hr-theme-slash-2">
+  <div class="hr-line"></div>
+  <div class="hr-icon"><i class="fa-solid fa-couch"></i></div>
+  <div class="hr-line"></div>
+</div>
 <br>
     <div class="container">
     <div class="row">
         <div class="col-md-12 col-lg-12 col-xl-12 offset-md-4">
         <form action="main.php" method="POST" >
-            <select name="category" class="form-control col-4" id="" style="height:7vh ; display: inline-block; ">
+            <select name="category" class="form-control col-4" id="" style="height:10vh ; display: inline-block; ">
                 <option value="all">all products</option>
                 <option value="office">Office products</option>
                 <option value="Bedroom">Bedroom Products</option>
@@ -46,7 +51,7 @@
                 switch ($_POST['category']) {
                     case 'all':
                         echo "<div class='col-md-4  mt-2'>
-                <div class='card'>
+                <div class='card prodheigh'>
                      <a href='single-product.php?product=".$product['id']."'>
                         <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                     </a>
@@ -76,7 +81,7 @@
                     case 'office':
                         if ($product['category_id'] == 1) {
                             echo "<div class='col-md-4  mt-2'>
-                            <div class='card'>
+                            <div class='card prodheigh'>
                                  <a href='single-product.php?product=".$product['id']."'>
                                     <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                                 </a>
@@ -109,7 +114,7 @@
                     case 'Bedroom':
                         if ($product['category_id'] == 2) {
                             echo "<div class='col-md-4  mt-2'>
-                            <div class='card'>
+                            <div class='card prodheigh'>
                                  <a href='single-product.php?product=".$product['id']."'>
                                     <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                                 </a>
@@ -142,7 +147,7 @@
                     case 'livingroom':
                         if ($product['category_id'] == 3) {
                             echo "<div class='col-md-4  mt-2'>
-                            <div class='card'>
+                            <div class='card prodheigh'>
                                  <a href='single-product.php?product=".$product['id']."'>
                                     <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                                 </a>
@@ -175,7 +180,7 @@
                         case 'sales':
                             if ($product['sale'] == 1) {
                                 echo "<div class='col-md-4  mt-2'>
-                                <div class='card'>
+                                <div class='card prodheigh'>
                                      <a href='single-product.php?product=".$product['id']."'>
                                         <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                                     </a>
@@ -209,7 +214,7 @@
             }
             else{
                 echo "<div class='col-md-4  mt-2'>
-                <div class='card'>
+                <div class='card prodheigh'>
                      <a href='single-product.php?product=".$product['id']."'>
                         <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                     </a>
