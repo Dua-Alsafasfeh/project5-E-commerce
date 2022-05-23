@@ -46,8 +46,8 @@ include './include/header.php'; ?>
           <div class="card-body">
             <h3 class="card-title">Anas Allawafeh</h3>
             <p class="card-text">Full Stack Web Developer</p>
-            <a href="https://www.linkedin.com/in/anas-al-lawafeh-b05954232/" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
-            <a href="https://github.com/10-anasAllawafeh/project5" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/anas-al-lawafeh-b05954232/" target="_blank" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a href="https://github.com/10-anasAllawafeh/project5" target="_blank" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
           </div>
         </div>
       </div>
@@ -59,8 +59,8 @@ include './include/header.php'; ?>
           <div class="card-body">
             <h3 class="card-title">Du'a Alsafasfeh</h3>
             <p class="card-text">Full Stack Web Developer</p>
-            <a href="https://www.linkedin.com/in/du-a-alsafasfeh-70a9a7147/" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
-            <a href="https://github.com/Dua-Alsafasfeh" class="card-link"><i class="fa-brands fa-github fa-lg" ></i></a>
+            <a href="https://www.linkedin.com/in/du-a-alsafasfeh-70a9a7147/" target="_blank" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a href="https://github.com/Dua-Alsafasfeh" target="_blank" class="card-link"><i class="fa-brands fa-github fa-lg" ></i></a>
           </div>
         </div>
       </div>
@@ -71,8 +71,8 @@ include './include/header.php'; ?>
           <div class="card-body">
             <h3 class="card-title">Dyar </h3>
             <p class="card-text">Full Stack Web Developer</p>
-            <a href="#" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
-            <a href="#" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
+            <a href="#" target="_blank" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a href="#" target="_blank" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
           </div>
         </div>
       </div>
@@ -88,8 +88,8 @@ include './include/header.php'; ?>
           <div class="card-body">
             <h3 class="card-title">Marwa Nseerat</h3>
             <p class="card-text">Full Stack Web Developer</p>
-            <a href="#" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
-            <a href="#" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
+            <a href="#" target="_blank" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a href="#" target="_blank" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
           </div>
         </div>
       </div>
@@ -100,8 +100,8 @@ include './include/header.php'; ?>
           <div class="card-body">
             <h3 class="card-title">Obada Alshafeey</h3>
             <p class="card-text">Full Stack Web Developer</p>
-            <a href="https://www.linkedin.com/in/obada-alshafeey-735b3518b/" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
-            <a href="https://github.com/obadaalshafeey" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/obada-alshafeey-735b3518b/" target="_blank" class="card-link"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a href="https://github.com/obadaalshafeey" target="_blank" class="card-link"><i class="fa-brands fa-github fa-lg"></i></a>
           </div>
         </div>
       </div>
