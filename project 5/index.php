@@ -166,7 +166,7 @@ include 'include/header.php'; ?>
     </div>
     <!-- </div> -->
 </div>
-<br><br>
+<br>
 <!--start sale show-->
 <div class="container">
 <div class="row">
@@ -177,7 +177,7 @@ include 'include/header.php'; ?>
     if ($product['sale'] == 1 && $product['id'] <= 10){
 
      echo "<div class='col-md-4  mt-2'>
-                <div class='card'>
+                <div class='card prodheigh'>
                      <a href='single-product.php?product=".$product['id']."'>
                         <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                     </a>
@@ -201,6 +201,7 @@ include 'include/header.php'; ?>
 <?php endforeach; ?>
 </div>
 </div>
+<br>
 <!-- End sale show -->
 <!-- end discount -->
 
