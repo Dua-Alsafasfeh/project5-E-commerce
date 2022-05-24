@@ -183,8 +183,8 @@ include 'include/header.php'; ?>
                             <a href='single-product.php?product=".$product['id']."'>
                                 ".$product['pname']."
                             </a>
-                            </h5><span class='product_price'>$".$product['new_price']."</span>
-                                <span class ='old-price' STYLE='text-decoration:line-through'>$".$product['price']."</span>
+                            </h5><span class='product_price'>JD".$product['new_price']."</span>
+                                <span class ='old-price' STYLE='text-decoration:line-through'>JD".$product['price']."</span>
                                 <p class='card-text'>
                             <a href='single-product.php?product=".$product['id']."' class='btn btn-primary btn-sm'>
                                 View

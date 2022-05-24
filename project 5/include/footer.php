@@ -29,16 +29,13 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold text-white">Useful Links</h6>
                         <p>
-                            <a href="../index.php" class="text-white">Home</a>
+                            <a href="./index.php" class="text-white">Home</a>
                         </p>
                         <p>
-                            <a href="../main.php" class="text-white">Product</a>
+                            <a href="./main.php" class="text-white">Product</a>
                         </p>
                         <p>
-                            <a href="" class="text-white">Sale</a>
-                        </p>
-                        <p>
-                            <a href="../about.php" class="text-white">About us</a>
+                            <a href="./about.php" class="text-white">About us</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -62,21 +59,21 @@
                         <h6 class="text-uppercase mb-4 font-weight-bold text-white">Follow us</h6>
 
                         <!-- Facebook -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="https://www.facebook.com/modanistore" role="button"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="https://www.facebook.com/modanistore" role="button" target="_blank"><i class="fab fa-facebook-f"></i></a>
 
                         <!-- Twitter -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="https://twitter.com/modanifurniture" role="button"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="https://twitter.com/modanifurniture" role="button" target="_blank"><i class="fab fa-twitter"></i></a>
 
                         <!-- Google -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="https://www.modani.com/" role="button"><i class="fab fa-google"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="https://www.modani.com/" role="button" target="_blank"><i class="fab fa-google"></i></a>
 
                         <!-- Instagram -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="https://www.instagram.com/modanifurniture/" role="button"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="https://www.instagram.com/modanifurniture/" role="button" target="_blank"><i class="fab fa-instagram"></i></a>
 
                         <!-- Linkedin -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in" target="_blank"></i></a>
                         <!-- Github -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color:#E60023" href="https://www.pinterest.com/modanifurniture/_created/" role="button"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color:#E60023" href="https://www.pinterest.com/modanifurniture/_created/" role="button" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
                     </div>
                 </div>
                 <!--Grid row-->
@@ -88,7 +85,7 @@
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: #363062">
             © 2022 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">LUXURY FURNITURE STORE</a>
+            <a class="text-white" href=" " target="_blank">LUXURY FURNITURE STORE</a>
         </div>
         <!-- Copyright -->
     </footer>

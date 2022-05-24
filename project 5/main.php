@@ -15,7 +15,7 @@
 
     if (isset($_POST['singalProduct'])) {
         $_SESSION['product_id']=$_POST['id_value'];
-        header('location: single-product.php');
+        header('location: product_detail3.php');
     }
 
 
@@ -62,11 +62,11 @@
                             </a>
                             </h5>";
                             if ($product['sale']==1) {
-                                echo "<span class='product_price'>$".$product['new_price']."</span>
-                                <span class ='old-price' STYLE='text-decoration:line-through'>$".$product['price']."</span>";
+                                echo "<span class='product_price'>JD".$product['new_price']."</span>
+                                <span class ='old-price' STYLE='text-decoration:line-through'>JD".$product['price']."</span>";
                             }
                             else{
-                                echo "<span class='product_price'>$".$product['price']."</span>";
+                                echo "<span class='product_price'>JD".$product['price']."</span>";
        
                             }
                             echo "<p class='card-text'>
@@ -92,11 +92,11 @@
                                         </a>
                                         </h5>";
                                         if ($product['sale']==1) {
-                                            echo "<span class='product_price'>$".$product['new_price']."</span>
-                                            <span class ='old-price' STYLE='text-decoration:line-through'>$".$product['price']."</span>";
+                                            echo "<span class='product_price'>JD".$product['new_price']."</span>
+                                            <span class ='old-price' STYLE='text-decoration:line-through'>JD".$product['price']."</span>";
                                         }
                                         else{
-                                            echo "<span class='product_price'>$".$product['price']."</span>";
+                                            echo "<span class='product_price'>JD".$product['price']."</span>";
                    
                                         }
                                         echo "<p class='card-text'>
@@ -125,11 +125,11 @@
                                         </a>
                                         </h5>";
                                         if ($product['sale']==1) {
-                                            echo "<span class='product_price'>$".$product['new_price']."</span>
-                                            <span class ='old-price' STYLE='text-decoration:line-through'>$".$product['price']."</span>";
+                                            echo "<span class='product_price'>JD".$product['new_price']."</span>
+                                            <span class ='old-price' STYLE='text-decoration:line-through'>JD".$product['price']."</span>";
                                         }
                                         else{
-                                            echo "<span class='product_price'>$".$product['price']."</span>";
+                                            echo "<span class='product_price'>JD".$product['price']."</span>";
                    
                                         }
                                         echo "<p class='card-text'>
@@ -158,11 +158,11 @@
                                         </a>
                                     </h5>";
                                     if ($product['sale']==1) {
-                                        echo "<span class='product_price'>$".$product['new_price']."</span>
-                                        <span class ='old-price' STYLE='text-decoration:line-through'>$".$product['price']."</span>";
+                                        echo "<span class='product_price'>JD".$product['new_price']."</span>
+                                        <span class ='old-price' STYLE='text-decoration:line-through'>JD".$product['price']."</span>";
                                     }
                                     else{
-                                        echo "<span class='product_price'>$".$product['price']."</span>";
+                                        echo "<span class='product_price'>JD".$product['price']."</span>";
                
                                     }
                                     echo "<p class='card-text'>
@@ -191,8 +191,8 @@
                                             </a>
                                             </h5>";
                                             if ($product['sale']==1) {
-                                                echo "<span class='product_price'>$".$product['new_price']."</span>
-                                                <span class ='old-price' STYLE='text-decoration:line-through'>$".$product['price']."</span>";
+                                                echo "<span class='product_price'>JD".$product['new_price']."</span>
+                                                <span class ='old-price' STYLE='text-decoration:line-through'>JD".$product['price']."</span>";
                                             }
                                             else{
                                                 echo "<span class='product_price'>$".$product['price']."</span>";
@@ -225,11 +225,11 @@
                             </a>
                         </h5>";
                         if ($product['sale']==1) {
-                            echo "<span class='product_price'>$".$product['new_price']."</span>
-                            <span class ='old-price' STYLE='text-decoration:line-through'>$".$product['price']."</span>";
+                            echo "<span class='product_price'>JD".$product['new_price']."</span>
+                            <span class ='old-price' STYLE='text-decoration:line-through'>JD".$product['price']."</span>";
                         }
                         else{
-                            echo "<span class='product_price'>$".$product['price']."</span>";
+                            echo "<span class='product_price'>JD".$product['price']."</span>";
    
                         }
                         echo "

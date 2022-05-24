@@ -1,17 +1,6 @@
 <?php
 include 'config/connect.php';
 
-if(isset($_POST["submit_img"])){
-    $file_name = $_FILES["file"]["name"];
-    $file_type = $_FILES["file"]["type"];
-    $file_size = $_FILES["file"]["size"];
-    $file_tem = $_FILES["file"]["tmp_name"];
-    $file_store = "images/".$file_name;
-    // echo $file_store;
-    move_uploaded_file($file_tem, $file_store);
-}
-
-
 //call the user information from database
 $users=mysqli_fetch_all(mysqli_query($conn,'select * from users'),MYSQLI_ASSOC);
 
@@ -23,6 +12,10 @@ $sales=mysqli_fetch_all(mysqli_query($conn,'select * from sales'),MYSQLI_ASSOC);
 
 // call the category informations from database
 $category=mysqli_fetch_all(mysqli_query($conn,'select * from category'),MYSQLI_ASSOC);
+
+// call the category ID from database
+// $category_ID=mysqli_fetch_column((mysqli_result $category, int $column = 0));
+// print_r($category_ID);
 
 
 // Form Display Default state
@@ -154,16 +147,18 @@ if (isset($_POST['addProductSub'])) {
     $baF="none";
 }
 if (isset($_POST['addProductSubmit'])) {
-
+    $file_name = $_FILES["file"]["name"];
+    $file_type = $_FILES["file"]["type"];
+    $file_size = $_FILES["file"]["size"];
+    $file_tem = $_FILES["file"]["tmp_name"];
+    $file_store = "images/".$file_name;
+    move_uploaded_file($file_tem, $file_store);
     $newName=$_POST['productAddName'];
     $newCategory=$_POST['productAddCategory'];
-    $newImage=$_POST['productAddImage'];
     $newPrice=$_POST['productAddPrice'];
     $newQuantity=$_POST['productAddQuantity'];
-    // $creatat=date('d-m-Y');
-    // $updateat=date('d-m-Y');
      echo $newName.$newCategory.$newPrice.$newQuantity;
-$sqla="INSERT INTO `products` (pname,category_id,image,price,quantity) VALUES ('$newName','$newCategory','$newImage','$newPrice','$newQuantity');";
+$sqla="INSERT INTO `products` (pname,category_id,image,price,quantity) VALUES ('$newName','$newCategory','$file_store','$newPrice','$newQuantity');";
 mysqli_query($conn,$sqla);
 }
 
@@ -173,8 +168,6 @@ if (isset($_POST['addCatSub'])) {
 }
 if (isset($_POST['addCatSubmit'])) {
     $newName=$_POST['catAddName'];
-    // $creatat=date('d-m-Y');
-    // $updateat=date('d-m-Y');
 $sql="INSERT INTO category (categoryname) VALUES ('$newName');";
 mysqli_query($conn,$sql);
 echo $newName;
@@ -283,15 +276,15 @@ echo $newName;
 <!-- ////////////////////chooose table function//////////////// -->
 <!-- //////////////////////////////////////////////// -->
 
-<div class="col-md-12 col-lg-12 col-xl-12 offset-md-4">
+<div class="col-md-12 col-lg-12 col-xl-12 offset-md-3">
     <form action="admin.php" method="POST" >
-        <select name="tables" class="form-control col-4" id="" style="height:7vh ; display: inline-block; ">
+        <select name="tables" class="form-control col-4" id="" style="height:10vh ; display: inline-block; ">
             <option value="usersTable">Users Table</option>
             <option value="productsTable">Products Table</option>
             <option value="categoriesTable">Categories Table</option>
             <option value="salesTable">Sales Table</option>
         </select>
-        <button class="btn btn-secondary " name="select" type="submit" style="margin-left: .75em;">Select</button>
+        <button class="btn btn-success " name="select" type="submit" style="margin-left: .75em;">Select</button>
     </form>
 </div>
 
@@ -332,13 +325,34 @@ switch ($_POST['tables']) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
-<!-- Users Information Table -->
 
+<!-- add user button -->
+<div class="container row">
+<div class="col-3 offset-3">
 <form action="admin.php" method="POST" >
-
-<button class="btn bg-secondary" type="submit" name="addUserSub">Add User</button>
+<button class="btn bg-info" type="submit" name="addUserSub">Add User</button>
 </form>
+</div>
+
+
+<!-- add product button -->
+<div class="col-3">
+<form action="admin.php" method="POST">
+<button class="btn bg-info" type="submit" name="addProductSub">Add Product</button>
+</form>
+</div>
+<!-- add category button -->
+<div class="col-3">
+<form action="admin.php" method="POST" >
+<button class="btn bg-info" type="submit" name="addCatSub">Add Category</button>
+</form>
+</div>
+</div>
 <br>
+
+
+<!-- Users Information Table -->
+<div class="container">
 <table class="table" style="display:<?php echo $utF; ?> ;">
 <h1 style="display:<?php echo $utF; ?> ;">Users Information</h1>
     <tr class='bg-active' style="background-color:pink;">
@@ -385,10 +399,9 @@ switch ($_POST['tables']) {
         <?php endforeach; ?>
     
 </table>
+</div>
 <!-- End Of Users Information Table -->
 
-
-<br><br>
 
 <!-- Update User Info Form -->
 <form class="container" action="admin.php" method="POST" style="display:<?php echo $uF; ?> ;">
@@ -445,32 +458,24 @@ switch ($_POST['tables']) {
 </form>
 <!-- End Of Add User Form -->
 
-<br><br>
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////Products////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-<!-- add product button -->
-<form action="admin.php" method="POST">
-<button class="btn bg-secondary" type="submit" name="addProductSub" style="display:<?php echo $baF; ?> ;">Add Product</button>
-</form>
+
 
 <!-- Add Product Form -->
-<form action="admin.php" method="POST" class="container" style="display:<?php echo $paF; ?> ;">
+<form action="admin.php" method="POST" class="container" enctype="multipart/form-data" style="display:<?php echo $paF; ?> ;">
 <div class="form-row">
     <div class="form-group col-md-2">
     <label for="paname">product Name</label>
     <input type="text" id='paname' name="productAddName" placeholder="name">
     </div>
-    <div class="form-group col-md-2">
-    <label for="paCate">Product Category</label>
-    <input type="number" id='paCate' name="productAddCategory" placeholder="Category ID">
+    <div class="form-group col-md-3 ">
+    <label for="paimg">Product Image</label>
+    <input type="file" name="file" id="file">
     </div>
-    <!-- <div class="form-group col-md-3 ">
-    <label for="paimg">Product Image</label> -->
-    <input type="hidden" id='paimg' name="productAddImage" placeholder="Image" value="<?php $file_store ?>">
-    <!-- </div> -->
     <div class="form-group col-md-2 ">
     <label for="paprice">Product Price</label>
     <input type="text" id='paprice' name="productAddPrice" placeholder="Price">
@@ -479,27 +484,31 @@ switch ($_POST['tables']) {
     <label for="paquantity">Product Quantity</label>
     <input type="text" id='paquantity' name="productAddQuantity" placeholder="Quantity">
     </div>
+    <div class="form-group col-md-2">
+    <label for="paCate">Product Category</label>
+    <select id='paCate' name="productAddCategory">
+    <?php foreach($category as $key => $name): ?>
+    <option value="<?php echo $name['category_id']; ?>"><?php echo $name['categoryname'];?></option>
+    <?php endforeach; ?>
+    </select>
+    </div>
     
     <div class="form-group col-md-2 ">
-    <button type="submit" class="btn btn-primary" name="addProductSubmit">Add</button>
+    <button type="submit" class="btn btn-success" name="addProductSubmit">Add</button>
     </div>
     </div>
 </form>
-<form action="?" method="POST" enctype="multipart/form-data" style="display:<?php echo $paF; ?> ;">
-        <input type="file" name="file" id="file">
-        <input type="submit" name="submit_img" value="submit">
-</form>
-
 <!-- End Of Add Product Form -->
-<br><br>
+
 
 
 <!-- End Of add product button -->
 
 <!-- Products Information Table -->
+<div class="container">
 <table class="table" style="display:<?php echo $ptF; ?> ;">
 <h1 style="display:<?php echo $ptF; ?> ;">Products Information</h1>
-    <tr class='bg-warning'>
+    <tr class='' style="background-color:pink;">
         <td>Id</td>
         <td>Product name</td>
         <td>Image</td>
@@ -543,9 +552,9 @@ switch ($_POST['tables']) {
         ?>
         <?php endforeach; ?>
 </table>
+</div>
 <!-- End Of Products Information Table -->
 
-<br><br>
 
 <!-- Update Product Info Form -->
 <form action="admin.php" method="POST" class="container" style="display:<?php echo $pF; ?> ;">
@@ -572,7 +581,7 @@ switch ($_POST['tables']) {
     </div>
     </div>
 
-    <button type="submit" class="btn btn-primary" name="productUpdatesubmit">Update</button>
+    <button type="submit" class="btn btn-info" name="productUpdatesubmit">Update</button>
 </form>
 <!-- End Of Update Product Info Form -->
 
@@ -583,10 +592,7 @@ switch ($_POST['tables']) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!-- categories Information Table -->
-<form action="admin.php" method="POST" >
-<button class="btn bg-secondary" type="submit" name="addCatSub">Add Category</button>
-</form>
-<br>
+<div class="container">
 <table class="table" style="display:<?php echo $ctF; ?> ;">
 <h1 style="display:<?php echo $ctF; ?> ;">Categories Information</h1>
     <tr class='' style='background-color:pink;'>
@@ -627,10 +633,10 @@ switch ($_POST['tables']) {
         <?php endforeach; ?>
     
 </table>
+</div>
 <!-- End Of categories Information Table -->
 
 
-<br><br>
 
 <!-- Update Categories Info Form -->
 <form class="container" action="admin.php" method="POST" style="display:<?php echo $cF; ?> ;">
@@ -642,7 +648,7 @@ switch ($_POST['tables']) {
     <br>
     </div>
     <div class="col-md-2 offset-col-4">
-    <button type="submit" class="btn btn-success" name="updateCatSubmit">Update</button>
+    <button type="submit" class="btn btn-primary" name="updateCatSubmit">Update</button>
     </div>
 </form>
 <!-- End Of Update Categories Info Form -->
@@ -663,13 +669,12 @@ switch ($_POST['tables']) {
 </form>
 <!-- End Of Add Category Form -->
 
-<br><br>
 
 <!-- Start of Sales table -->
-
+<div class="container">
 <table class="table" style="display:<?php echo $stF; ?> ;">
     <h1 style="display:<?php echo $stF; ?> ;">Sales Information</h1>
-    <tr class='bg-success'>
+    <tr style="background-color:pink;">
         <th>order Id</th>
         <th>Product name</th>
         <th>Image</th>
@@ -693,4 +698,5 @@ switch ($_POST['tables']) {
         ?>
         <?php endforeach; ?>
 </table>
+</div>
 <!-- End of Sales table -->
