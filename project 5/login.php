@@ -67,7 +67,7 @@ include 'include/header.php';
 <form  action="login.php" method="POST" id="logForm">
 
     
-        <h2 style="text-align:center; font-family: 'FontAwesome';
+        <h2 style="text-align:center; font-family: 'FontAwesome'; color:#363062;
     font-weight: bolder;">Log In form</h2>
     
 

@@ -65,3 +65,7 @@
       color: #363062;
       font-size: 2em;
 }
+.form-row label{
+    color: #363062;
+    font-weight: 600;
+}

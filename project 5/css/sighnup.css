@@ -5,10 +5,14 @@ body {
     font-family: sans-serif;
   }
   .regmain{
-    background: url("./images/pexels-photo-1350789.jpeg");
+    background: url("../images/regbackground.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+  }
+  .regmain label{
+    color: #363062;
+    font-weight: 600;
   }
   .loginBox {
     /* position: absolute;
@@ -35,7 +39,7 @@ body {
   h2 {
     margin: 0;
     padding: 0 0 26px;
-    color: #ff8c00;
+    color: #363062;
     text-align: center;
   }
   

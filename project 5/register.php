@@ -3,7 +3,7 @@ include 'config/connect.php';
 
 
 //switch page 
-
+$checkemailexist=mysqli_fetch_all(mysqli_query($conn,'SELECT * FROM users'),MYSQLI_ASSOC);
 
 // Register Validation function
 
@@ -51,14 +51,28 @@ if (isset($_POST["signup"])) {
         $ln = "block";
     }
 
-    //for Email check  
-    else if (empty($_POST["registerEmail"])) {
-        $emailErr = "Please insert your email";
-        $em = "block";
-    } else if (!preg_match($filter, $_POST["registerEmail"])) {
-        $emailErr = "Email should be like this: test@test.com";
-        $em = "block";
-    }
+     //for Email check  
+     else if (empty($_POST["registerEmail"]))
+     {
+         $emailErr="Please insert your email";
+         $em="block";
+     }
+     // for dublicate email check
+     else if (!empty($_POST["registerEmail"]))
+     {
+       foreach ($checkemailexist as $key => $email){
+         if ($_POST["registerEmail"] == $email['email']) {
+           $emailErr="This Email already exist";
+           $em="block";
+           break;
+         }
+       }
+     }
+     else if (!preg_match($filter, $_POST["registerEmail"]))
+     {
+         $emailErr="Email should be like this: test@test.com";
+         $em="block";
+     }
 
     //for phone number check
     else if (empty($_POST["phoneNumber"])) {
@@ -135,9 +149,8 @@ include 'include/header.php';
 </div>
 <br>
 
-<link rel="stylesheet" href="./sighnup.css">
+<link rel="stylesheet" href="./css/sighnup.css">
 <link rel="stylesheet" href="./css/">
-
 
 <!-- Sign Up form -->
 <main class="regmain">
