@@ -1,9 +1,6 @@
 <?php include 'config/connect.php';
-session_start();
-include 'include/header.php'; ?>
+session_start();?>
 <?php include 'config/config.php';
-session_start();
-
 $sql = "SELECT * from products p;";
 $handle = $db->prepare($sql);
 $handle->execute();
@@ -112,7 +109,7 @@ include 'include/header.php'; ?>
                     <div class="row">
                         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
                             <div class="img_bg">
-                                <h3 id="">5%-10% DISCOUNT<br> <strong class="black_nolmal">the latest collection</strong></h3>
+                                <h3 id="">Up To 10% DISCOUNT<br> <strong class="black_nolmal">the latest collection</strong></h3>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
@@ -201,7 +198,7 @@ include 'include/header.php'; ?>
 <?php endforeach; ?>
 </div>
 </div>
-<br>
+<br><br>
 <!-- End sale show -->
 <!-- end discount -->
 
