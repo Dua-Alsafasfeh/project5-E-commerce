@@ -18,7 +18,7 @@ include 'include/header.php'; ?>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mapimg">
                     <div class="text-bg text-h1">
                         <h1>The latest <br> <strong class="black_bold ">furniture Design</strong><br></h1>
-                        <a href="#">Shop Now <i class='fa fa-angle-right'></i></a>
+                        <a href="main.php">Shop Now <i class='fa fa-angle-right'></i></a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -186,7 +186,7 @@ include 'include/header.php'; ?>
                             </h5><span class='product_price'>JD".$product['new_price']."</span>
                                 <span class ='old-price' STYLE='text-decoration:line-through'>JD".$product['price']."</span>
                                 <p class='card-text'>
-                            <a href='single-product.php?product=".$product['id']."' class='btn btn-primary btn-sm'>
+                            <a href='single-product.php?product=".$product['id']."' class='btn btn-secondary btn-sm'>
                                 View
                             </a>
                         </p>
