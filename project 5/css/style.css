@@ -2382,7 +2382,8 @@ margin-top: 35px;
 .product_price {
     font-size: 18px;
     font-weight: 600;
-    color: #0fbbad;
+    /* color: #0fbbad; */
+	color: #363062;
     margin: 0;
 
 }

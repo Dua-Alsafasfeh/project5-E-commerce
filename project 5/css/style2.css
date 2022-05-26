@@ -38,6 +38,7 @@
 .prodheigh img{
     height: 35vh;
 }
+
 .aboutheight img{
     height: 350px;
 }
@@ -68,4 +69,7 @@
 .form-row label{
     color: #363062;
     font-weight: 600;
+}
+.card-body{
+    text-align: center;
 }
