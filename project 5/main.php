@@ -52,12 +52,12 @@
                     case 'all':
                         echo "<div class='col-md-4  mt-2'>
                 <div class='card prodheigh'>
-                     <a href='single-product.php?product=".$product['id']."'>
+                     <a href='product_detail3.php?product=".$product['id']."'>
                         <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                     </a>
                     <div class='card-body'>
                         <h4 class='card-title'>
-                            <a href='single-product.php?product=".$product['id']."'>
+                            <a href='product_detail3.php?product=".$product['id']."'>
                                 ".$product['pname']."
                             </a>
                             </h4>";
@@ -70,7 +70,7 @@
        
                             }
                             echo "<p class='card-text'>
-                            <a href='single-product.php?product=".$product['id']."' class='btn btn-primary btn-sm'>
+                            <a href='product_detail3.php?product=".$product['id']."' class='btn btn-primary btn-sm'>
                                 View
                             </a>
                         </p>
@@ -82,12 +82,12 @@
                         if ($product['category_id'] == 1) {
                             echo "<div class='col-md-4  mt-2'>
                             <div class='card prodheigh'>
-                                 <a href='single-product.php?product=".$product['id']."'>
+                                 <a href='product_detail3.php?product=".$product['id']."'>
                                     <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                                 </a>
                                 <div class='card-body'>
                                     <h4 class='card-title'>
-                                        <a href='single-product.php?product=".$product['id']."'>
+                                        <a href='product_detail3.php?product=".$product['id']."'>
                                             ".$product['pname']."
                                         </a>
                                         </h4>";
@@ -115,12 +115,12 @@
                         if ($product['category_id'] == 2) {
                             echo "<div class='col-md-4  mt-2'>
                             <div class='card prodheigh'>
-                                 <a href='single-product.php?product=".$product['id']."'>
+                                 <a href='product_detail3.php?product=".$product['id']."'>
                                     <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                                 </a>
                                 <div class='card-body'>
                                     <h4 class='card-title'>
-                                        <a href='single-product.php?product=".$product['id']."'>
+                                        <a href='product_detail3.php?product=".$product['id']."'>
                                             ".$product['pname']."
                                         </a>
                                         </h4>";
@@ -148,12 +148,12 @@
                         if ($product['category_id'] == 3) {
                             echo "<div class='col-md-4  mt-2'>
                             <div class='card prodheigh'>
-                                 <a href='single-product.php?product=".$product['id']."'>
+                                 <a href='product_detail3.php?product=".$product['id']."'>
                                     <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                                 </a>
                                 <div class='card-body'>
                                     <h4 class='card-title'>
-                                        <a href='single-product.php?product=".$product['id']."'>
+                                        <a href='product_detail3.php?product=".$product['id']."'>
                                             ".$product['pname']."
                                         </a>
                                     </h4>";
@@ -181,12 +181,12 @@
                             if ($product['sale'] == 1) {
                                 echo "<div class='col-md-4  mt-2'>
                                 <div class='card prodheigh'>
-                                     <a href='single-product.php?product=".$product['id']."'>
+                                     <a href='product_detail3.php?product=".$product['id']."'>
                                         <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                                     </a>
                                     <div class='card-body'>
                                         <h4 class='card-title'>
-                                            <a href='single-product.php?product=".$product['id']."'>
+                                            <a href='product_detail3.php?product=".$product['id']."'>
                                                 ".$product['pname']."
                                             </a>
                                             </h4>";
@@ -215,12 +215,12 @@
             else{
                 echo "<div class='col-md-4  mt-2'>
                 <div class='card prodheigh'>
-                     <a href='single-product.php?product=".$product['id']."'>
+                     <a href='product_detail3.php?product=".$product['id']."'>
                         <img class='card-img-top' src='".$imgUrl."' alt='".$product['pname']."'>
                     </a>
                     <div class='card-body'>
                         <h4 class='card-title'>
-                            <a href='single-product.php?product=".$product['id']."'>
+                            <a href='product_detail3.php?product=".$product['id']."'>
                                 ".$product['pname']."
                             </a>
                         </h4>";
