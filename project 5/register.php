@@ -60,16 +60,16 @@ if (isset($_POST["signup"])) {
          $em="block";
      }
      // for dublicate email check
-     else if (!empty($_POST["registerEmail"]))
-     {
-       foreach ($checkemailexist as $key => $email){
-         if ($_POST["registerEmail"] == $email['email']) {
-           $emailErr="This Email already exist";
-           $em="block";
-           break;
-         }
-       }
-     }
+    //  else if (!empty($_POST["registerEmail"]))
+    //  {
+    //    foreach ($checkemailexist as $key => $email){
+    //      if ($_POST["registerEmail"] == $email['email']) {
+    //        $emailErr="This Email already exist";
+    //        $em="block";
+    //        break;
+    //      }
+    //    }
+    //  }
      else if (!preg_match($filter, $_POST["registerEmail"]))
      {
          $emailErr="Email should be like this: test@test.com";
@@ -218,12 +218,12 @@ include 'include/header.php';
                         <option value="Aqaba">Aqaba</option>
                         <option value="Maan">Maan</option>
                         <option value="Irbid">Irbid</option>
-                        <option value="Zarqa">Zarqa</option>
+                        <option value="Zarqa">Zarqaa</option>
                         <option value="Ajloun">Ajloun</option>
                         <option value="Jarash">Jarash</option>
                         <option value="Al-Mafraq">Al-Mafraq</option>
-                        <option value="Al-Tafeela">Al-Tafeela</option>
-                        <option value="El-Karak">El-Karak</option>
+                        <option value="Al-Tafeela">Al-Tafila</option>
+                        <option value="El-Karak">Al-Karak</option>
                         <option value="Madaba">Madaba</option>
                         <option value="Al-Salt">Al-Salt</option>
                     </select>

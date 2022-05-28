@@ -7,7 +7,7 @@ $uF = "none";
 $user_id = $_SESSION['id'];
 $orders = mysqli_fetch_all(mysqli_query($conn, "SELECT * FROM user_orders WHERE user_idd='$user_id';"), MYSQLI_ASSOC);
 $userinfo = mysqli_fetch_all(mysqli_query($conn, "SELECT * FROM users WHERE id='$user_id';"), MYSQLI_ASSOC);
-print_r($user_id);
+// print_r($user_id);
 // update user Function
 if (isset($_POST['updateUserSubmit'])) {
     $newName = $_POST['userName'];
@@ -42,19 +42,20 @@ include 'include/header.php';
             </div>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="text-img">
+            <div class="text-img" >
                 <div class="container">
                     <div class="row gutters">
                         <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
                             <div class="card h-100">
-                                <div class="card-body">
+                                <div class="card-body userpro">
                                     <div class="account-settings">
                                         <div class="user-profile">
                                             <div class="user-avatar">
                                                 <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
                                             </div>
-                                            <h5 class="user-name"><?php echo $_SESSION['name'] ?></h5>
-                                            <h6 class="user-email"><?php echo $_SESSION['email'] ?></h6>
+                                            <br>
+                                            <h4 class="user-name"><?php echo $_SESSION['name'] ?></h4>
+                                            <h5 class="user-email"><?php echo $_SESSION['email'] ?></h5>
                                         </div>
                                         <!-- <div class="about">
 				<h5>About</h5>
@@ -72,7 +73,7 @@ include 'include/header.php';
                                         <div class="row gutters">
 
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                <h6 class="mb-2 text-primary">Personal Details</h6>
+                                                <h5 class="mb-2 text-primary">Personal Details</h5>
                                             </div>
                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                 <div class="form-group">
@@ -101,7 +102,7 @@ include 'include/header.php';
                                         </div>
                                         <div class="row gutters">
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                <h6 class="mt-3 mb-2 text-primary">Location</h6>
+                                                <h5 class="mt-3 mb-2 text-primary">Location</h5>
                                             </div>
                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                 <div class="form-group">
@@ -121,7 +122,7 @@ include 'include/header.php';
                                                 <div class="text-right">
 
                                                     <button class="btn btn-secondary" type="submit" name="cart">My Orders</button>
-                                                    <button type="submit" id="submit" name="updateUserSubmit" class="btn btn-primary">Update</button>
+                                                    <button type="submit" id="submit" name="updateUserSubmit" class="btn btn-dark">Update</button>
                                     </form>
                                 </div>
                             </div>
@@ -131,10 +132,10 @@ include 'include/header.php';
             </div>
         </div>
     </div>
-
+    <br>
     <!-- <button class="btn btn-secondary" type="submit" name="cart">My Orders</button> -->
-    <div class="container" style="border:1px solid !important ;">
-        <table class="table" style="display:<?php echo $orderF ?>;">
+    <div class="container" >
+        <table class="table" style="display:<?php echo $orderF ?>; border:.5px solid !important ;">
             <th>Product_name</th>
             <th>Quantity</th>
             <th>Product price</th>
