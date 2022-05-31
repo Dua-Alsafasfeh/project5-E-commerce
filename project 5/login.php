@@ -7,13 +7,14 @@ session_start();
 
 $le= $lp="none";
 $lpErr="";
+// $passwordlogin = md5($passwordlogin);
 $login=mysqli_fetch_all(mysqli_query($conn,'select * from users'),MYSQLI_ASSOC);
 
 if (isset($_POST['login'])) 
 {
 
     $lemail=$_POST['email'];
-    $lpassword=$_POST['password'];
+    $lpassword=md5($_POST['password']);
     if (empty($_POST['email']) || empty($_POST['password'])) {
         $lp="block";
         $lpErr="please insert email and Password";
@@ -26,7 +27,6 @@ if (isset($_POST['login']))
             header('location: admin.php');
             // break;
         }
-
     else {
         foreach($login as $user )
         {
