@@ -35,6 +35,7 @@ if (isset($_POST['login']))
                 $_SESSION['id']=$user['id'];
                 $_SESSION['name']=$user['fname'];
                 $name=$user['fname'];
+                $_SESSION['lname']=$user['lname'];
                 $_SESSION['email']=$user['email'];
                 $_SESSION['phone']=$user['phone'];
                 $_SESSION['city']=$user['city'];
@@ -95,6 +96,7 @@ include 'include/header.php';
 </form>
 <form  action="login.php" method="POST" id="sForm">
 <button class="btn col-md-4 offset-md-4" type="submit" name="switch" style="background-color:#E9D5DA ; color:#363062"><a href="./register.php">Sign Up !!!</a></button>
+<a class="col-md-4 offset-md-4" href="reset.php">Forget password?</a>
 </form>
 <!-- end of switch to signup form -->
 

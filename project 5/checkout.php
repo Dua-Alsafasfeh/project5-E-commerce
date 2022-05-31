@@ -11,8 +11,6 @@ $city=$_SESSION['city'];
 $address=$_SESSION['address'];
 
 
-
-
 if (!isset($_SESSION['cart_items']) || empty($_SESSION['cart_items'])) {
   header('location:index.php');
   exit();
@@ -85,9 +83,9 @@ include('include/header.php');
           <strong>JD<?php echo number_format($total, 2); ?></strong>
         </li>
       </ul>
-      <form method="POST" action="checkout.php" style="display: flex; flex-direction: column;">
+      <form method="POST" class="needs-validation" action="checkout.php" style="display: flex; flex-direction: column;">
         <button class="btn btn-success btn-lg" type="submit" name="submit" value="submit">Place order</button>
-    </form>
+    <!-- </form> -->
     </div>
     
     <div class="col-md-6 order-md-1">
@@ -99,7 +97,7 @@ include('include/header.php');
         }
       }
       ?>
-      <form class="needs-validation" method="POST">
+      <!-- <form class="needs-validation" method="POST"> -->
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">First name</label>
